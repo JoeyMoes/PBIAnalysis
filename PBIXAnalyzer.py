@@ -25,7 +25,7 @@ class PBIXAnalyzer:
 
         self.extract_fields(data_model)
         self.extract_fields(report_layout)
-
+        
     def extract_fields(self, json_data):
         def parse_table(table):
             for column in table.get('columns', []):
@@ -50,7 +50,7 @@ class PBIXAnalyzer:
         return output_file
 
 if __name__ == '__main__':
-    pbix_file_path = 'path_to_your_pbix_file.pbix'  # Replace with actual path
+    pbix_file_path = 'Kelderbouw - dashboard.pbix'  # Replace with actual path
     analyzer = PBIXAnalyzer(pbix_file_path)
     output_file = analyzer.analyze()
     print(f'Fields exported to {output_file}')
